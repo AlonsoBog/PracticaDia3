@@ -1,4 +1,3 @@
-name: Accion al abrir
 on: 
   issues:
     types: opened
