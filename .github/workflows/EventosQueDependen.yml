@@ -1,0 +1,15 @@
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Desde el setup"
+  build:
+    needs:setup
+    runs-on: ubuntu-latest
+    steps:
+      -run: echo "Desde el build"
+test:
+  needs: build
+  runs-on: ubuntu-latest
+  steps:
+    - run: echo "Desde test"
